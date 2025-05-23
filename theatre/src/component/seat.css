@@ -1,0 +1,269 @@
+.containerseat {
+  padding: 20px;
+}
+
+.theatre {
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.theatre-header {
+  margin-bottom: 20px;
+}
+
+.date-selection {
+  margin-bottom: 20px;
+}
+
+.date-btn {
+  margin-right: 10px;
+  padding: 8px 12px;
+  background-color: #e0e0e0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.date-btn.selected {body {
+  background-color: #24262c;
+}
+
+.hall {
+  font-family: 'Open Sans';
+  font-size: 16px;
+  color: #fff;
+  overflow: hidden;
+  
+  &__screen {
+    margin: 0 auto;
+    height: 150px;
+    width: 450px;
+    margin-bottom: -15px;
+    background-image: url('https://pp.userapi.com/c637817/v637817124/51e82/0vv1WFX0TlM.jpg');
+    background-size: cover;
+    background-position: center;
+    transform: perspective(1000px) rotateX(-30deg);
+    overflow: hidden;
+    box-shadow: 0 40px 55px -17px transparentize(#fff, 0.8);
+  }
+}
+
+.seats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: perspective(1000px) rotateX(30deg);
+  counter-reset: RowLeft RowRight;
+  
+  &__row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    font-size: 10px;
+    
+    &:before,
+    &:after {
+      position: absolute;
+      top: 10px;
+      width: 10px;
+      color: #fff;
+      opacity: 0.5;
+    }
+    
+    &:before {
+      left: -15px;
+      text-align: right;
+      counter-increment: RowLeft;
+      content: counter(RowLeft);
+    }
+    
+    &:after {
+      right: -15px;
+      text-align: left;
+      counter-increment: RowRight;
+      content: counter(RowRight);
+    }
+  }
+  
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 18px;
+    width: 18px;
+    margin: 8px;
+    padding: 3px;
+    background-color: #03a9f4;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.1s ease;
+    
+    &:hover {
+      transform: scale(1.4);
+      
+      .seats__item-num {
+        opacity: 1;
+      }
+    }
+    
+    &_selected {
+      background-color: #ff9800;
+      transform: scale(1.4);
+      z-index: 10;
+      box-shadow: 0 3px 10px 0 transparentize(#ff9800, 0.4);
+      
+      .seats__item-num {
+        opacity: 1;
+      }
+    }
+  }
+  
+  &__item-num {
+    opacity: 0;
+    color: #fff;
+    transition: 0.1s ease;
+  }
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  padding: 30px;
+  background-color: #444852;
+  
+  &__price {
+    margin: 0;
+    text-align: left;
+  }
+  
+  &__price-value {
+    font-weight: 700;
+  }
+}
+
+.button {
+  padding: 10px 30px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #03a9f4;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  
+  &:disabled {
+    opacity: 0.2;
+  }
+}
+  background-color: #2196f3;
+  color: white;
+}
+
+.screen {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cinema-seats {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cinema-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.seat {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ccc;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.seat.booked {
+  background-color: rgb(172, 31, 238);
+  pointer-events: none;
+  color: white;
+}
+.seat.selected {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+
+.seat.locked {
+  background-color: #f44336; /* red */
+  color: white;
+  cursor: not-allowed;
+}
+
+.pay-section {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.pay-button {
+  padding: 10px 20px;
+  background-color: #673ab7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.seat-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #444852;
+  color: white;
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.legend-color {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.legend-color.booked {
+  background-color: rgb(172, 31, 238);
+}
+
+.legend-color.locked {
+  background-color: #f44336;
+}
+
+.legend-color.selected {
+  background-color: #4caf50;
+}
+
+.legend-color.available {
+  background-color: #ccc;
+}
+

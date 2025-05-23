@@ -1,0 +1,111 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem; /* Add some padding for small screens */
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  border: 2px solid #333;
+  border-radius: 12px;
+  padding: 20px;
+  width: 90%;
+  max-width: 450px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  flex-wrap: wrap;
+  position: relative; /* Positioning context for the price */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.theatre-name {
+  background: #ff4757;
+  color: white;
+  padding: 15px;
+  margin-right: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  min-width: 100px;
+}
+
+.movie-details {
+  flex: 1;
+  text-align: left;
+}
+
+.movie-name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.buttons button {
+  padding: 8px 15px;
+  border: none;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: background 0.3s ease;
+  flex: 1 1 45%;
+  min-width: 100px;
+}
+
+.buttons button:hover {
+  background: linear-gradient(135deg, #0056b3, #003f7f);
+}
+
+/* Position the price in the top-left corner */
+.price {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 2rem;
+  color: #000000;
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 480px) {
+  .card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .theatre-name {
+      margin-bottom: 10px;
+      margin-right: 0;
+  }
+  .buttons {
+      flex-direction: column;
+      align-items: center;
+  }
+  .buttons button {
+      width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card {
+    padding: 1rem;
+  }
+
+  .container {
+    padding: 0 0.5rem; /* Adjust padding for very small screens */
+  }
+}

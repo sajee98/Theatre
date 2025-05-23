@@ -1,0 +1,135 @@
+/* Global styles for the page */
+.page-container {
+    width: 106.9%;
+    max-width: 100vw;
+    padding: 20px;
+    background-color: #fbe2da;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .loading-message {
+    font-size: 1.5rem;
+    color: #007bff;
+    text-align: center;
+  }
+  
+  .table-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .movie-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* Table styling */
+  .react-data-table-component {
+    width: 100%;
+  }
+  
+  .react-data-table-component .rdt_TableHeader {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .react-data-table-component .rdt_TableBody {
+    background-color: #f1f1f1;
+  }
+  
+  .react-data-table-component .rdt_TableRow {
+    cursor: pointer;
+  }
+  
+  .react-data-table-component .rdt_TableRow:hover {
+    background-color: #e2e6ea;
+  }
+  
+  .react-data-table-component .rdt_TableHead {
+    font-weight: bold;
+  }
+  
+  /* Actions column styling */
+  .action-button {
+    border: none;
+    padding: 8px;
+    margin: 0 5px;
+    background-color: #28a745;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .action-button:hover {
+    background-color: #218838;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  /* Search Bar Styling */
+.search-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #343a40;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Making the page full-width */
+  @media screen and (max-width: 768px) {
+    .page-container {
+      padding: 10px;
+    }
+  
+    .page-title {
+      font-size: 2rem;
+    }
+  
+    .table-container {
+      padding: 10px;
+    }
+  
+    .movie-img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  
