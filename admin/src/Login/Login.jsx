@@ -13,7 +13,7 @@ const LoginForm = () => {
     setError("");
 
     if (!email || !password) {
-      setError("Both fields are required");
+      setError("Both field are required");
       return;
     }
 
